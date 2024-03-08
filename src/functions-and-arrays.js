@@ -56,7 +56,7 @@ function sum(array) {
   return total;
 }
 
-console.log(sum(mixedArr));
+console.log("sum mixed: "+sum(mixedArr));
 
 
 
@@ -69,7 +69,7 @@ function averageNumbers(arr) {
   let sum = 0;
   let n = arr.length;
   for (let j = 0; j < n; j++){
-    sum += arr[i];
+    sum += arr[j];
   }
   let avg = sum / (n);
   return avg;
@@ -93,7 +93,7 @@ averageWordLength(wordsArr);
 // Bonus - Iteration #4.1
 function avg(arr) { 
   let total = 0;
-  for (let j = 0; j < arr.length; j++){
+  for (let i = 0; i < arr.length; i++){
     if (typeof arr[i] === 'number') {
       total += arr[i];
     }
@@ -176,10 +176,11 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes(arr,word) {
+function howManyTimes(arr, word) {
+  
+  let c = 0;
   for(let i=0;i<arr.length;i++)
   {
-    let c = 0;
       if(arr[i]===word)
         c++;
     }
